@@ -1,5 +1,6 @@
 package com.sparta.team9back.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
