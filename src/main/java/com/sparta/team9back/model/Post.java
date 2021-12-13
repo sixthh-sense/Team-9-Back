@@ -8,6 +8,8 @@ import javax.persistence.*;
 
 @Entity
 @Getter
+@Builder
+@NoArgsConstructor
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,9 +34,8 @@ public class Post {
     @Column(nullable = false)
     private Boolean negoCheck;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(nullable = false)
-    private Category category;
+    @Column
+    private String category;
 
 
 }
