@@ -1,6 +1,5 @@
 package com.sparta.team9back.dto;
 
-import com.sparta.team9back.model.Category;
 import lombok.*;
 
 @AllArgsConstructor

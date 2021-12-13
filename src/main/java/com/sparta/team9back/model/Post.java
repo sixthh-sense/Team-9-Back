@@ -1,5 +1,6 @@
 package com.sparta.team9back.model;
 
+import com.sparta.team9back.dto.PostRequestDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,4 +39,12 @@ public class Post {
     private String category;
 
 
+    public void update(PostRequestDto postRequestDto) {
+        this.title = postRequestDto.getTitle();
+        this.content = postRequestDto.getContent();
+        this.price = postRequestDto.getPrice();
+        this.goodsImg = postRequestDto.getGoodsImg();
+        this.negoCheck = postRequestDto.getNegoCheck();
+        this.category = postRequestDto.getCategory();
+    }
 }

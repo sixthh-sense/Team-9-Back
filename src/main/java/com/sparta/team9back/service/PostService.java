@@ -27,7 +27,7 @@ public class PostService {
                 .build();
         postRepository.save(post);
 
-        PostResponseDto postResponseDto = PostResponseDto.builder()
+        return PostResponseDto.builder()
                 .title(postRequestDto.getTitle())
                 .content(postRequestDto.getContent())
                 .category(postRequestDto.getCategory())
@@ -35,7 +35,6 @@ public class PostService {
                 .price(postRequestDto.getPrice())
                 .negoCheck(postRequestDto.getNegoCheck())
                 .build();
-        return postResponseDto;
     }
 
     @Transactional
