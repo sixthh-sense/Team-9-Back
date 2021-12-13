@@ -12,5 +12,5 @@ public class HomeResponseDto {
     String title;
     int price;
     String goodsImg;
-    boolean like;
+    int likeCount;
 }

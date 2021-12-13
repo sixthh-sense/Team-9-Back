@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -19,10 +18,10 @@ public class HomeController {
     private final HomeService homeService;
 
     // 모든 포스트 보여주기
-    @GetMapping("/")
+    @GetMapping("/posts")
     public List<HomeResponseDto> getAllPosts(@RequestParam int page, @RequestParam int size) {
-        Pageable sortedByIdDesc = (Pageable) PageRequest.of(page, size, Sort.by("id").descending());
-        return homeService.findAllPosts(sortedByIdDesc);
+        PageRequest sortedByPostIdDesc = PageRequest.of(page, size, Sort.by("postId").descending());
+        return homeService.findAllPosts(sortedByPostIdDesc);
     }
 
 }

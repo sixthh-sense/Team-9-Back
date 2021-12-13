@@ -1,14 +1,12 @@
 package com.sparta.team9back.dto;
 
 import com.sparta.team9back.model.Category;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
 @Builder
 public class PostRequestDto {
     private String title;

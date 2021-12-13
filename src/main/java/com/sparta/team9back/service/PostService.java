@@ -16,6 +16,7 @@ public class PostService {
 
     @Transactional // 이걸 잊지 않았나 하는 생각.
     public PostResponseDto createPost(PostRequestDto postRequestDto) {
+
         Post post = Post.builder()
                 .goodsImg(postRequestDto.getGoodsImg())
                 .title(postRequestDto.getTitle())
