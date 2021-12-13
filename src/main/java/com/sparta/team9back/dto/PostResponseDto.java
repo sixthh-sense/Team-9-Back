@@ -5,7 +5,6 @@ import lombok.*;
 
 @AllArgsConstructor
 @Getter
-@NoArgsConstructor
 @Setter
 @Builder
 public class PostResponseDto {
@@ -15,5 +14,5 @@ public class PostResponseDto {
     int price;
     String goodsImg;
     boolean negoCheck;
-    Category category;
+    String category;
 }

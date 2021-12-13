@@ -14,5 +14,5 @@ public class PostRequestDto {
     private int price;
     private String goodsImg;
     private Boolean negoCheck;
-    private Category category;
+    private String category;
 }
