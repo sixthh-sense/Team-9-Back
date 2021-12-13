@@ -1,6 +1,5 @@
 package com.sparta.team9back.dto;
 
-import com.sparta.team9back.model.Category;
 import lombok.*;
 
 @AllArgsConstructor
@@ -8,12 +7,10 @@ import lombok.*;
 @NoArgsConstructor
 @Setter
 @Builder
-public class PostResponseDto {
+public class HomeResponseDto {
     String username;
     String title;
-    String content;
     int price;
     String goodsImg;
-    boolean negoCheck;
-    Category category;
+    boolean like;
 }

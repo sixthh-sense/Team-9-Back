@@ -34,9 +34,11 @@ public class Post {
     @Column(nullable = false)
     private Boolean negoCheck;
 
+    @Column(nullable = false)
+    private Boolean like;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false)
     private Category category;
-
 
 }

@@ -1,6 +1,6 @@
 package com.sparta.team9back.controller;
 
-import com.sparta.team9back.dto.PostResponseDto;
+import com.sparta.team9back.dto.HomeResponseDto;
 import com.sparta.team9back.service.HomeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -16,14 +16,13 @@ import java.util.List;
 @RestController
 public class HomeController {
 
-//    private final HomeService homeService;
-//
-//
-//    // 모든 포스트 보여주기
-//    @GetMapping("/")
-//    public List<PostResponseDto> getAllPosts(@RequestParam int page, @RequestParam int size) {
-//        Pageable sortedByIdDesc = PageRequest.of(page, size, Sort.by("id").descending());
-//        return homeService.findAllPosts(sortedByIdDesc);
-//    }
+    private final HomeService homeService;
+
+    // 모든 포스트 보여주기
+    @GetMapping("/")
+    public List<HomeResponseDto> getAllPosts(@RequestParam int page, @RequestParam int size) {
+        Pageable sortedByIdDesc = (Pageable) PageRequest.of(page, size, Sort.by("id").descending());
+        return homeService.findAllPosts(sortedByIdDesc);
+    }
 
 }
